@@ -13,6 +13,7 @@ def main():
 
 
 def get_score(score):
+    """Gets score as float and converts to a text output."""
     if score < 0 or score > 100:
         return "Invalid score"
     elif score >= 90:
