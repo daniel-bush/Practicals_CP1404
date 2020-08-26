@@ -1,6 +1,15 @@
 def main():
-    numbers = collect_numbers()
-    calculate_stats(numbers)
+    usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface',
+                 'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer',
+                 'bob']
+
+    user = input("Please enter username: ")
+    if user in usernames:
+        print("Access granted:")
+        numbers = collect_numbers()
+        calculate_stats(numbers)
+    else:
+        print("Access denied")
 
 
 def collect_numbers() -> list:
@@ -19,6 +28,7 @@ def calculate_stats(number_list: list) -> None:
     print("The largest number is {}".format(max(number_list)))
     average = sum(number_list) / len(number_list)
     print("The average of the numbers is {}".format(average))
+
 
 
 main()
