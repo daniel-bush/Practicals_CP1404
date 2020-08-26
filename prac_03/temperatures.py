@@ -1,21 +1,22 @@
 """
 CP1404/CP5632 - Practical
-Conversion
+Conversion between celsius and fahrenheit calculator
 """
+
+MENU = "C - Convert Celsius to Fahrenheit\n" \
+       "F - Convert Fahrenheit to Celsius\n" \
+       "Q - Quit"
+
+
 def main():
-    MENU = """C - Convert Celsius to Fahrenheit
-    F - Convert Fahrenheit to Celsius
-    Q - Quit"""
     print(MENU)
     choice = input(">>> ").upper()
     while choice != "Q":
         if choice == "C":
             celsius = float(input("Celsius: "))
-            fahrenheit = celsius * 9.0 / 5 + 32
-            print("Result: {:.2f} F".format(fahrenheit))
+            result = celsius_to_fahrenheit(celsius)
+            print("Result: {:.2f} F".format(result))
         elif choice == "F":
-            # Hint: celsius = 5 / 9 * (fahrenheit - 32)
-            # Remove the "pass" statement when you are done. It's a placeholder.
             fahrenheit = float(input("Fahrenheit: "))
             celsius = 5 / 9 * (fahrenheit - 32)
             print("Result: {:.2f} C".format(celsius))
@@ -24,5 +25,11 @@ def main():
         print(MENU)
         choice = input(">>> ").upper()
     print("Thank you.")
-    
+
+
+def celsius_to_fahrenheit(celsius):
+    return celsius * 9.0 / 5 + 32
+
+
+
 main()
