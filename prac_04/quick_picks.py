@@ -29,17 +29,16 @@ def get_numbers() -> list:
     """Generates list of unique random integers within a specified range. Returns list."""
     line = []
     for i in range(NUMBERS_PER_LINE):
-        unique = False
-        while not unique:
+        number = randint(LOWEST_VALUE, HIGHEST_VALUE)
+        while number in line:
             number = randint(LOWEST_VALUE, HIGHEST_VALUE)
-            if number not in line:
-                line.append(number)
-                unique = True
+        line.append(number)
     line.sort()
     return line
 
 
 def display_quick_pick(lines):
+    """Prints the lines to the screen. Takes line data."""
     for line in lines:
         print(" ".join("{:2}".format(number) for number in line))
 
