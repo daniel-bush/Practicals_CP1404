@@ -22,7 +22,7 @@ def main():
         line = get_numbers()
         line_values.append(line)
 
-    print(line_values)
+    display_quick_pick(line_values)
 
 
 def get_numbers() -> list:
@@ -38,6 +38,10 @@ def get_numbers() -> list:
     line.sort()
     return line
 
+
+def display_quick_pick(lines):
+    for line in lines:
+        print(" ".join("{:2}".format(number) for number in line))
 
 
 main()
