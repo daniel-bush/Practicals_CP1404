@@ -15,8 +15,10 @@ def main():
 def collect_numbers() -> list:
     """Collect numbers as integers from user and adds them to a list. The list is returned."""
     numbers = []
-    for i in range(5):
-        numbers.append(int(input("Number: ")))
+    number = int(input("Number {}: ".format(len(numbers) + 1)))
+    while number >= 0:
+        numbers.append(number)
+        number = int(input("Number {}: ".format(len(numbers) + 1)))
     return numbers
 
 
