@@ -12,5 +12,3 @@ while colour != "":
         print("Incorrect colour!")
     colour = input("Colour: ").lower()
 print("Thank you!")
-
-
