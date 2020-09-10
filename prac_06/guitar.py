@@ -15,5 +15,16 @@ class Guitar:
         """Return string of guitar."""
         return "{} ({}) : ${:,.2f}".format(self.name, self.year, self.cost)
 
+    def get_age(self):
+        current_year = datetime.now().year
+        return current_year - self.year
 
 
+def test_code():
+    tester = Guitar("Tester", 2000, 150)
+    print(tester)
+    print(tester.get_age())
+
+
+if __name__ == "__main__":
+    test_code()
