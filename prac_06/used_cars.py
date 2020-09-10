@@ -26,6 +26,7 @@ def main():
     limo.drive(115)
     # 5
     print("odo =", limo.odometer)
-
+    # 6 - added to car.py
+    print(limo)
 
 main()
