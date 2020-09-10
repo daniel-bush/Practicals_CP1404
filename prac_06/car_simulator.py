@@ -7,8 +7,21 @@ def main():
     print("Let's drive!")
     car_name = input("Enter the name of your car: ")
     car = Car(car_name, 100)
+
     # drive
     car = drive_car(car)
+
+    # refuel
+    car = refuel_car()
+
+
+
+
+def refuel_car(car):
+    fuel = check_valid_number("How many units of fuel do you want to add to the car?")
+    car.add_fuel(fuel)
+    print("Added {} units of fuel.".format(fuel))
+    return car
 
 
 def drive_car(car):
