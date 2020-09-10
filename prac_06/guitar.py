@@ -5,6 +5,7 @@ from datetime import datetime
 
 class Guitar:
     """Class for storing details of a guitar."""
+
     def __init__(self, name="", year=0, cost=0):
         """Initialise a Guitar."""
         self.name = name
@@ -16,8 +17,17 @@ class Guitar:
         return "{} ({}) : ${:,.2f}".format(self.name, self.year, self.cost)
 
     def get_age(self):
-        current_year = datetime.now().year
+        """Calculates the age of guitar."""
+        current_year = datetime.now().year  # looks up the current year from the system clock.
         return current_year - self.year
+
+    def is_vintage(self):
+        """Calculates if guitar is vintage - is true if age is greater or equal to 50 years old."""
+        current_age = self.get_age()
+        if current_age >= 50:
+            return True
+        else:
+            return False
 
 
 def test_code():
