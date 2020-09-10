@@ -7,9 +7,18 @@ def main():
     print("Let's drive!")
     car_name = input("Enter the name of your car: ")
     car = Car(car_name, 100)
-
     # drive
-    distance = check_valid_number("How many km do you wish to drive: ")
+    car = drive_car(car)
+
+
+def drive_car(car):
+    required_distance = check_valid_number("How many km do you wish to drive: ")
+    distance_traveled = car.drive(required_distance)
+    if car.fuel != 0:
+        print("The car drove {}km.".format(distance_traveled))
+    else:
+        print("The car drove {}km and ran out of fuel.".format(distance_traveled))
+    return car
 
 
 def check_valid_number(message):
@@ -20,7 +29,7 @@ def check_valid_number(message):
             if number >= 0:
                 valid_number = True
             else:
-                print("Number must be 0 or higher!")
+                print("Distance must be >= 0")
         except ValueError:
             print("Please insert a valid number!")
     return number
