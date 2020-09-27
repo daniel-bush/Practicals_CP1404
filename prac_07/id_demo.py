@@ -4,6 +4,7 @@ from kivy.lang import Builder
 
 
 class IDDemo(App):
+    """IDDemo is an app that asks for a name and greats them."""
     def build(self):
         self.title = "Demoing the id attribute"
         self.root = Builder.load_file('id_demo.kv')
