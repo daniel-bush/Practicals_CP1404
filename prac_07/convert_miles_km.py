@@ -14,14 +14,21 @@ class MilesToKMsApp(App):
         return self.root
 
     def handle_conversion(self):
-        miles = float(self.root.ids.input_miles.text)
+        miles = self.get_correct_miles_input()
         kms = miles * KM_IN_MILE
         self.message = str(kms)
 
     def handle_increment(self, increment):
-        current_miles = float(self.root.ids.input_miles.text)
-        current_miles += increment
-        self.root.ids.input_miles.text = str(current_miles).format()
+        miles = self.get_correct_miles_input()
+        miles += increment
+        self.root.ids.input_miles.text = str(miles).format()
+
+    def get_correct_miles_input(self):
+        try:
+            value = float(self.root.ids.input_miles.text)
+            return value
+        except ValueError:
+            return 0.0
 
 
 MilesToKMsApp().run()
