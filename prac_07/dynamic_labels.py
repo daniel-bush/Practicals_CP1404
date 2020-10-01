@@ -6,6 +6,7 @@ NAMES = ["Daniel", "Colin", "Sandra", "Victoria"]
 
 
 class DynamicLabelsApp(App):
+
     def build(self):
         """Build the kivy app from the kv file."""
         self.title = "Box Layout Demo"
