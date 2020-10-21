@@ -29,6 +29,8 @@ def main():
 
     hummer = SilverServiceTaxi("Hummer", 200, 4)
     print(hummer)
+    hummer.drive(11)
+    print("${:.2f}".format(hummer.get_fare()))
 
 
 
