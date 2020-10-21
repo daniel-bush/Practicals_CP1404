@@ -11,3 +11,14 @@ print(new_taxi)
 new_taxi.drive(40)
 print(new_taxi)
 
+# 3 - Print the taxi's details and the current fare
+
+print(new_taxi)
+print("name:", new_taxi.name)
+print("fuel", new_taxi.fuel)
+print("odometer", new_taxi.odometer)
+print("fare distance", new_taxi.current_fare_distance)
+print("fare $", new_taxi.price_per_km, "per/km")
+print("current fare: $", new_taxi.get_fare())
+
+
