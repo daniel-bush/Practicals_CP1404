@@ -21,4 +21,11 @@ print("fare distance", new_taxi.current_fare_distance)
 print("fare $", new_taxi.price_per_km, "per/km")
 print("current fare: $", new_taxi.get_fare())
 
+# 4 - Restart the meter (start a new fare) and then drive the car 100km
+
+new_taxi.start_fare()
+# can only drive 60k due to fuel left
+new_taxi.drive(100)
+print(new_taxi)
+
 
