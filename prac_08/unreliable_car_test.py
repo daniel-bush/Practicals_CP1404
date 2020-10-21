@@ -10,5 +10,15 @@ def main():
     print(good_car)
     print(bad_car)
 
+    # Test drive
+    for i in range(1, 12):
+        print("Try to drive {}km".format(i))
+        print("{} drove {}km)".format(good_car.name, good_car.drive(i)))
+        print("{} drove {}km)".format(bad_car.name, bad_car.drive(i)))
+
+    print(good_car)
+    print(bad_car)
+
+
 
 main()
