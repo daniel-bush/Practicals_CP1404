@@ -10,7 +10,9 @@ def main():
     less_fancy_taxi = SilverServiceTaxi("Less Fancy", 100, 3)
     normal_taxi = SilverServiceTaxi("Normal Taxi", 100, 1)
 
-    print()
+    print(fancy_taxi)
+    print(less_fancy_taxi)
+    print(normal_taxi)
 
 
 main()
