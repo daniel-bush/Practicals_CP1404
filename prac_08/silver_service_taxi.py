@@ -4,13 +4,19 @@ from prac_08.taxi import Taxi
 
 
 class SilverServiceTaxi(Taxi):
-    """Reoresent a silver service taxi."""
+    """Represent a silver service taxi."""
+    flagfall = 4.50
 
     def __init__(self, name, fuel, fanciness):
-        """Initalise as SilverServiceTaxi."""
+        """Initialise as SilverServiceTaxi."""
         super().__init__(name, fuel)
         self.fanciness = fanciness
         self.price_per_km *= fanciness
 
     def __str__(self):
         return "{}, fanciness {}".format(super().__str__(), self.fanciness)
+
+    def get_fare(self):
+        """Return the price for the silver service trip."""
+        return super().get_fare() + self.flagfall
+
