@@ -9,3 +9,6 @@ class UnreliableCar(Car):
         """Initalise a Unreliable Car instance based on parent class Car."""
         super().__init__(name, fuel)
         self.reliability = reliability
+
+    def __str__(self):
+        return "{}, reliability: {}".format(super().__str__(), self.reliability)
