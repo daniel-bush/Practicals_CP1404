@@ -12,3 +12,5 @@ class SilverServiceTaxi(Taxi):
         self.fanciness = fanciness
         self.price_per_km *= fanciness
 
+    def __str__(self):
+        return "{}, fanciness {}".format(super().__str__(), self.fanciness)
