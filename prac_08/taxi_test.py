@@ -7,3 +7,7 @@ from prac_08.taxi import Taxi
 new_taxi = Taxi("Prius 1", 100, 1.23)
 print(new_taxi)
 
+# 2 - Drive the taxi 40km
+new_taxi.drive(40)
+print(new_taxi)
+
