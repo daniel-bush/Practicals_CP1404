@@ -28,4 +28,8 @@ new_taxi.start_fare()
 new_taxi.drive(100)
 print(new_taxi)
 
+# 5 - Print the details and the current fare
+print(new_taxi)
+print("current fare: $", new_taxi.get_fare())
+
 
