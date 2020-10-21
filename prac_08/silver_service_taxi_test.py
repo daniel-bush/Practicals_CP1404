@@ -25,5 +25,11 @@ def main():
     actual_fare = fancy_taxi.get_fare()
     print("expected fare = {}, actual fare = {}".format(expected_fare, actual_fare))
 
+    # test __str__
+
+    hummer = SilverServiceTaxi("Hummer", 200, 4)
+    print(hummer)
+
+
 
 main()
