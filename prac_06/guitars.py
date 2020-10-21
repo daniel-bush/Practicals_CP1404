@@ -8,20 +8,23 @@ def main():
     guitars = []
 
     print("My guitars!")
-    name = input("Name: ")
-    while name != "":
-        correct_values = False
-        year = int(input("Year: "))
-        cost = float(input("Cost: "))
-        guitar_to_add = Guitar(name, year, cost)
-        guitars.append(guitar_to_add)
-        print("{} added".format(guitar_to_add))
-        name = input("Name: ")
+    # name = input("Name: ")
+    # while name != "":
+    #     year = int(input("Year: "))
+    #     cost = float(input("Cost: "))
+    #     guitar_to_add = Guitar(name, year, cost)
+    #     guitars.append(guitar_to_add)
+    #     print("{} added".format(guitar_to_add))
+    #     name = input("Name: ")
+
 
     # test code to avoid input
-    # guitars.append(Guitar("Fender Stratocaster", 2014, 765.40))
-    # guitars.append(Guitar("Gibson L-5 CES", 1922, 16035.40))
-    # guitars.append(Guitar("Line 6 JTV-59", 2010, 1512.9))
+    guitars.append(Guitar("Fender Stratocaster", 2014, 765.40))
+    guitars.append(Guitar("Gibson L-5 CES", 1922, 16035.40))
+    guitars.append(Guitar("Line 6 JTV-59", 2010, 1512.9))
+
+    for i in guitars:
+        print(i)
 
     if guitars:
         print("These are my guitars:")
