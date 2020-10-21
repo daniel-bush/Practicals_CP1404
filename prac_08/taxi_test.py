@@ -6,7 +6,7 @@ from prac_08.taxi import Taxi
 def main():
     # 1 - Create a new taxi with name "Prius 1", 100 units of fuel and price of $1.23/km
 
-    new_taxi = Taxi("Prius 1", 100, 1.23)
+    new_taxi = Taxi("Prius 1", 100)
     print(new_taxi)
 
     # 2 - Drive the taxi 40km
@@ -34,5 +34,7 @@ def main():
     print(new_taxi)
     print("current fare: $", new_taxi.get_fare())
 
+    # test class variable
+    print(new_taxi.price_per_km)
 
 main()
