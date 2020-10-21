@@ -11,6 +11,7 @@ def main():
 
     taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4)]
     total_bill = 0
+    current_taxi = ""
 
     print("Let's drive!")
     menu_choice = input(MENU).lower()
@@ -19,11 +20,25 @@ def main():
             print("Taxis available:")
             display_taxis(taxis)
             taxi_choice = get_validated_taxi_number(taxis)
+            current_taxi = taxis[taxi_choice]
+            print("Bill to date: ${:.2f}".format(total_bill))
         elif menu_choice == "d":
-            pass
+            if current_taxi == "":
+                print("Please choose taxi.")
+            else:
+                distance = int(input("Drive how far? "))
+                current_taxi.start_fare()
+                current_taxi.drive(distance)
+                trip_fare = current_taxi.get_fare()
+                print("Your {} trip cost you ${:.2f}".format(current_taxi.name, trip_fare))
+                total_bill += trip_fare
+                print("Bill to date: ${:.2f}".format(total_bill))
         else:
             print("invalid choice")
         menu_choice = input(MENU).lower()
+    print("Total trip cost: ${:.2f}".format(total_bill))
+    print("Taxis are now:")
+    display_taxis(taxis)
 
 
 def display_taxis(taxis):
