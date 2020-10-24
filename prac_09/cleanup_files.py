@@ -24,10 +24,16 @@ def get_fixed_filename(filename):
     """Return a 'fixed' version of filename."""
     print("Processing", filename)
     # change " " to _ and .TXT to .txt
-    new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
-    # indexed_name = enumerate(new_name)
-    # for i in indexed_name:
-    #     print
+    temp_name = filename.replace(" ", "_").replace(".TXT", ".txt")
+    i = 0
+    index_list = []
+    for char in temp_name:
+        if i != 0:
+            if char.isupper() and temp_name[i-1].islower():
+                index_list.append(i)
+        i += 1
+
+
 
 
 
