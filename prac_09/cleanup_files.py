@@ -32,7 +32,24 @@ def get_fixed_filename(filename):
             if char.isupper() and temp_name[i-1].islower():
                 index_list.append(i)
         i += 1
+    print(index_list)
+    new_word = []
+    iteration = 1
+    for number in index_list:
+        if iteration = 1:
+            where_from = 0:
 
+        where_from = i
+        where_to = index_list[i]
+        new_word.append(temp_name[where_from:where_to])
+        new_word.append("_")
+    print(new_word)
+
+
+    """I have spend hours on this and I have NO IDEA - recording not available of prac to help me!! """
+
+    # for change in range(1, number_of_changes):
+    #     print(change)
 
 
 
