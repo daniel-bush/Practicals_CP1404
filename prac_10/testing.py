@@ -68,3 +68,19 @@ doctest.testmod()
 # and one more you decide (one that is valid!)
 # test this and watch the tests fail
 # then write the body of the function so that the tests pass
+
+
+def phrase_to_sentence(phrase):
+    """
+    Format a phrase as a sentence, starting with a capital and ending with a .
+    >>> phrase_to_sentence('hello')
+    'Hello.'
+    >>> phrase_to_sentence('It is an ex parrot.')
+    'It is an ex parrot.'
+    >>> phrase_to_sentence('This subject rocks')
+    'This subject rocks.'
+    """
+    sentence = phrase.capitalize()
+    if sentence[-1] != '.':
+        sentence += '.'
+    return sentence
